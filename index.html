@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+	<head>
+		<link rel="stylesheet" href="style.css"/>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="background"></div>
+			<button type="button" class="btn btn-outline-primary" id="myBtn">CLICK ME</button>
+		</div>
+		<script>
+			document.getElementById("myBtn").addEventListener("click", changeColor);
+			
+		 	console.log(Math.floor((Math.random() * 7) + 1));
+
+		 	function changeColor(){
+		 		var colorchange = ["#DFFF00", "#FFBF00", "#FF7F50","#DE3163", "#9FE2BF", "#40E0D0", "#6495ED", "#CCCCFF"];
+		 		var col = colorchange[Math.floor((Math.random() * 6) + 1)];
+		 		document.body.style.background = col;
+		 		document.getElementById("background").innerHTML = "Background Color: "+col;
+		 	}
+		</script>
+	</body>
+</html>
